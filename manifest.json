@@ -2,7 +2,8 @@
      "manifest_version": 3,
      "name": "Locked In",
      "version": "0.1",
-     "description": "Set a task. Justify every tab.",
+     "description": "Set a task and get help avoiding distractions to lock in!",
+     "permissions": ["storage"],
      "action": {
        "default_popup": "popup.html"
      }
