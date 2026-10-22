@@ -1,0 +1,9 @@
+   {
+     "manifest_version": 3,
+     "name": "Locked In",
+     "version": "0.1",
+     "description": "Set a task. Justify every tab.",
+     "action": {
+       "default_popup": "popup.html"
+     }
+   }
