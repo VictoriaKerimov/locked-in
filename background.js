@@ -4,5 +4,6 @@ chrome.webNavigation.onBeforeNavigate.addListener(async (details) => {
 	if (!details.url.startsWith("http")) return;
 	const { enabled, task } = await chrome.storage.local.get(["enabled", "task"]);
 	if (!enabled || !task) return;
-	console.log("navigating to", details.url);
+	const whyPage = chrome.runtime.getURL("why.html") + "?url=" + encodeURIComponent(details.url);
+	chrome.tabs.update(details.tabId, { url: whyPage });
 });
